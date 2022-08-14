@@ -1,5 +1,4 @@
 // Hacker rank question 2.
-
 import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
@@ -13,4 +12,5 @@ System.out.println(num3);
     }
 }
 
+// Thank you.
 // Have a wondeful day.
