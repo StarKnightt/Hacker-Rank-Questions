@@ -13,3 +13,4 @@ public class Solution {
         System.out.println("Int: " + i);
     }
 }
+// Have a nice day
