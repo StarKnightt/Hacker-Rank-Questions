@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 // Using Java 15
 public class Solution {
     public static void main(String[] args) {
