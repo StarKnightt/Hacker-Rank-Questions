@@ -10,6 +10,7 @@ class Solution{
             int b = in.nextInt();
             int n = in.nextInt();
             int c = a;
+            // Star Knight
             for(int j=0;j<n;j++){
                 c += Math.pow(2, j)*b;
                 System.out.printf("%s ",c);
