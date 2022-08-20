@@ -23,8 +23,7 @@ class Solution {
             } catch (Exception e) {
                 System.out.println(scan.next() + " can't be fitted anywhere.");
             }
-        }
-        
+        }   
         scan.close();
     }
 }
