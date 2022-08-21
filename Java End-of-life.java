@@ -8,7 +8,6 @@ public class Solution {
             System.out.println(i + " " + scan.nextLine());
             i++;
         }
-        
         scan.close();
     }
 }
