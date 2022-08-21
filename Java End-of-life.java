@@ -11,3 +11,4 @@ public class Solution {
         scan.close();
     }
 }
+// Have a nice day
