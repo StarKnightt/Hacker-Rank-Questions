@@ -27,4 +27,4 @@ public class Solution {
             System.out.print(area);
         }
     } 
-} // end of class
+} 
