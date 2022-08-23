@@ -5,15 +5,12 @@ public class Solution {
 // Java 15
   
   DoNotTerminate.forbidExit();
-
   try {
    Scanner in = new Scanner(System.in);
    int n = in .nextInt();
    in.close();
    
 String s = Integer.toString(n);
-
-   
    if (n == Integer.parseInt(s)) {
     System.out.println("Good job");
    } else {
