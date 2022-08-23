@@ -45,3 +45,4 @@ class DoNotTerminate {
   System.setSecurityManager(securityManager);
  }
 }
+// Have a sweet day
