@@ -2,7 +2,8 @@ import java.util.*;
 import java.security.*;
 public class Solution {
  public static void main(String[] args) {
-
+// Java 15
+  
   DoNotTerminate.forbidExit();
 
   try {
