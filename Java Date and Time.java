@@ -33,7 +33,6 @@ class Result {
         LocalDate date = LocalDate.of(y, m, d);
         return date.getDayOfWeek().toString();
     }
-
 }
 
 public class Solution {
