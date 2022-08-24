@@ -57,3 +57,4 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+// Have a nice day.
