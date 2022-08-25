@@ -2,7 +2,6 @@ import java.util.*;
 import java.text.*;
 // Use Java 7
 public class Solution {
-    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double payment = scanner.nextDouble();
