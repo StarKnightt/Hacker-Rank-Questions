@@ -1,7 +1,6 @@
-
 import java.util.*;
 import java.text.*;
-
+// Use Java 7
 public class Solution {
     
     public static void main(String[] args) {
@@ -10,7 +9,6 @@ public class Solution {
         scanner.close();
         
         Locale INDIA = new Locale("en", "IN");//Creates a new Locale with English as the language and India as teh country
-        
         
         String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
         String india = NumberFormat.getCurrencyInstance(INDIA).format(payment);
