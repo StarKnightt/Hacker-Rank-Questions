@@ -6,9 +6,7 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         double payment = scanner.nextDouble();
         scanner.close();
-        
         Locale INDIA = new Locale("en", "IN");//Creates a new Locale with English as the language and India as teh country
-        
         String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
         String india = NumberFormat.getCurrencyInstance(INDIA).format(payment);
         String china = NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
