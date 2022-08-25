@@ -20,3 +20,4 @@ public class Solution {
         System.out.println("France: " + france);
     }
 }
+// Have a nice day
