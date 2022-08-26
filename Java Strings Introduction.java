@@ -16,3 +16,4 @@ public class Solution {
         System.out.println(A + " " + B);
     }
 }
+//  Have a nice day
