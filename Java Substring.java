@@ -10,3 +10,4 @@ public class Solution {
         System.out.println(str.substring(start, end));
     }
 }
+// Have a sweet day
