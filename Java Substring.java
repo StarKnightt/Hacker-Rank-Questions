@@ -9,5 +9,6 @@ public class Solution {
         sc.close();
         System.out.println(str.substring(start, end));
     }
+    
 }
 // Have a sweet day
