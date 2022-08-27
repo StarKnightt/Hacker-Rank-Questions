@@ -8,7 +8,6 @@ public class Solution {
         int end    = sc.nextInt();
         sc.close();
         System.out.println(str.substring(start, end));
-    }
-    
+    }   
 }
 // Have a sweet day
