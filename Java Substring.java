@@ -7,7 +7,6 @@ public class Solution {
         int start  = sc.nextInt();
         int end    = sc.nextInt();
         sc.close();
-        
         System.out.println(str.substring(start, end));
     }
 }
