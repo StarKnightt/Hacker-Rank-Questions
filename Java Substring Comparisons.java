@@ -27,4 +27,4 @@ public static String getSmallestAndLargest(String s, int k) {
         System.out.println(getSmallestAndLargest(s, k));
     }
 }
-
+// Have a nice day
