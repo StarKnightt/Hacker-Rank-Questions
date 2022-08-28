@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// java 15
 public class Solution {
 public static String getSmallestAndLargest(String s, int k) {
         String smallest = "";
