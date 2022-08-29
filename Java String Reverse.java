@@ -12,4 +12,4 @@ public class Solution {
         System.out.println(str.equals(reversed) ? "Yes" : "No");
     }
 }
-
+// Have a amazing day.
