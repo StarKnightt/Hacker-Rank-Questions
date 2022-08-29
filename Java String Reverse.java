@@ -1,4 +1,5 @@
 import java.util.Scanner;
+/* Java 15/*
 /* If a String is equivalent to itself when reversed, it's a palindrome */
 public class Solution {
     public static void main(String[] args) {
