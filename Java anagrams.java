@@ -20,7 +20,6 @@ public class Solution {
                             break;
                         }
                         break;
-
                     }
 
                 }
@@ -28,4 +27,3 @@ public class Solution {
         }
       return ret;
    }
-        
