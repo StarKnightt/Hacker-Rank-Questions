@@ -21,7 +21,6 @@ public class Solution {
                         }
                         break;
                     }
-
                 }
             }
         }
