@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Solution {
-    static boolean isAnagram(String a, String b) {   
+static boolean isAnagram(String a, String b) {   
         
  // Once you declare a.toUppercase you should assign it to a. you cannot define it as just a.toUppercase... 
 // I solved it with the long way however I could put a and b in a character array and then use  Arrays.sort(arrayname). after this steps convert them to string and check if they are equal.
