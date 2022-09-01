@@ -16,7 +16,6 @@ public class Solution {
                  numTokens++;
              
          System.out.println(numTokens);
-        
          for (int i=0; i<tokens.length;++i)
              if (tokens[i].length() > 0)
                  System.out.println(tokens[i]);
