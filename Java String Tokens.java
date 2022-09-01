@@ -11,7 +11,7 @@ public class Solution {
          String[] tokens = S.split("[^a-zA-Z]");
          int numTokens = 0;
         
-         for (int i=0; i<tokens.length; ++i) 
+         for (int i=0; i<tokens.length; ++i)     //Just using for loop
              if (tokens[i].length() > 0) 
                  numTokens++;
         
