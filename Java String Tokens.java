@@ -6,7 +6,7 @@ import java.util.regex.*;
 // Java 7
 public class Solution {
     public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
+         Scanner sc = new Scanner(System.in);  // Scanner library 
          String S = sc.nextLine();
          String[] tokens = S.split("[^a-zA-Z]");
          int numTokens = 0;
