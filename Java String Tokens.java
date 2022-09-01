@@ -22,4 +22,3 @@ public class Solution {
                  System.out.println(tokens[i]);
     }
 }
-
