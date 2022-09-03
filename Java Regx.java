@@ -1,7 +1,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Scanner;
-
+// Java 7
 class Solution{
 
     public static void main(String[] args){
