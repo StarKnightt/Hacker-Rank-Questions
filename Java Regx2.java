@@ -8,7 +8,6 @@ public class DuplicateWords {
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         Scanner in = new Scanner(System.in);
         int numSentences = Integer.parseInt(in.nextLine());
-        
         while (numSentences-- > 0) {
             String input = in.nextLine();
             
