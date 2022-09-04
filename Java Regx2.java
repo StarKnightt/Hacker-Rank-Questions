@@ -15,7 +15,6 @@ public class DuplicateWords {
             while (m.find()) {
                 input = input.replaceAll(m.group(), m.group(1));
             }
-            
             // Prints the modified sentence.
             System.out.println(input);
         }
