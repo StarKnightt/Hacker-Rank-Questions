@@ -10,7 +10,6 @@ public class DuplicateWords {
         int numSentences = Integer.parseInt(in.nextLine());
         while (numSentences-- > 0) {
             String input = in.nextLine();
-            
             Matcher m = p.matcher(input);
             
             // Check for subsequences of input that match the compiled pattern
