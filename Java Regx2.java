@@ -4,7 +4,6 @@ import java.util.regex.Pattern;
 // Java 8
 public class DuplicateWords {
     public static void main(String[] args) {
-
         String regex = "\\b(\\w+)(?:\\W+\\1\\b)+";
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
