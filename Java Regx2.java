@@ -21,4 +21,4 @@ public class DuplicateWords {
         in.close();
     }
 }
-
+// Have a amazing day.
