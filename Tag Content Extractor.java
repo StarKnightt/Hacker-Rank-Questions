@@ -14,8 +14,7 @@ public class Solution{
           if (!m.find()) {
               System.out.println("None");
               continue;
-          }
-          
+          }  
           m.reset();
           while (m.find()){
               System.out.println(m.group(2));
