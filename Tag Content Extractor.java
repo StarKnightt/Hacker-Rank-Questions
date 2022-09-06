@@ -10,8 +10,7 @@ public class Solution{
       int t = Integer.parseInt(in.nextLine());
       while(t-->0){
           String line = in.nextLine();
-          Matcher m = Pattern.compile("<(.+)>(([^<>]+))</\\1>").matcher(line);
-          
+          Matcher m = Pattern.compile("<(.+)>(([^<>]+))</\\1>").matcher(line);         
           if (!m.find()) {
               System.out.println("None");
               continue;
