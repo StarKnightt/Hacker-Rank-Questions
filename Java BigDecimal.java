@@ -11,7 +11,6 @@ class Solution {
             s[i] = sc.next();
         }
         sc.close();
-        
         // We want to sort in descending order while preserving the contents 
         // of each String. A comparator can achieve this for us. We convert  
         // to BigDecimal inside our comparator so that the change is not 
