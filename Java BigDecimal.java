@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 import java.util.*;
-
+// Java 15
 class Solution {
     public static void main(String []args) {
         //Input
