@@ -23,8 +23,7 @@ class Solution {
                 return b.compareTo(a); // descending order
             }
         };
-        Arrays.sort(s, 0, n, customComparator);
-        
+        Arrays.sort(s, 0, n, customComparator);  
         //Output
         for (int i = 0; i < n; i++) {
             System.out.println(s[i]);
