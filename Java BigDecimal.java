@@ -30,4 +30,4 @@ class Solution {
         }
     }
 }
-
+// Have a amazing life.
