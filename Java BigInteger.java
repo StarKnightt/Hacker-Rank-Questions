@@ -24,3 +24,4 @@ public class Solution {
         System.out.println(product);
     }
 }
+// Have a peaceful day. 
