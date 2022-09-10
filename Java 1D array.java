@@ -16,3 +16,4 @@ public class Solution {
         }
     }
 }
+// Have a awesome day.
