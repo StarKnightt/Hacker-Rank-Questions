@@ -9,7 +9,6 @@ public class Solution {
             int val = scan.nextInt();
             a[i] = val;
         }
-
         scan.close();
 
         // Prints each sequential element in array a
