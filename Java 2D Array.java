@@ -5,7 +5,7 @@ public class Solution
 {
     public static void main(String[] args)
     {
-        int a[][] = new int[6][6];
+        int a[][] = new int[6][6];   // array.
         int maxSum = Integer.MIN_VALUE;
         try (Scanner scanner = new Scanner(System.in);)
         {
