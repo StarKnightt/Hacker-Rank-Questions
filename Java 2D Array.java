@@ -32,5 +32,4 @@ public class Solution
         System.out.println(maxSum);
     }
 }
-
 // Have a lovely day.
