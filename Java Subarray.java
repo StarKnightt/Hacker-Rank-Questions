@@ -40,4 +40,4 @@ public class Solution {
         return sum;
     }
 }
-
+// Have a nice day.
