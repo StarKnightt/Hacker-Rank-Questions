@@ -38,4 +38,3 @@ public class Solution
             || solveGame(array, jumpSize, position-1, testedPositions);
     }
 }
-
