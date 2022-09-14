@@ -38,3 +38,4 @@ public class Solution
             || solveGame(array, jumpSize, position-1, testedPositions);
     }
 }
+// Thank you, Have a creative Day.
