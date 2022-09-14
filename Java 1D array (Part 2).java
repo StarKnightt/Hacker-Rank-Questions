@@ -36,7 +36,6 @@ public class Solution
         return solveGame(array, jumpSize, position+jumpSize, testedPositions)
             || solveGame(array, jumpSize, position+1, testedPositions) 
             || solveGame(array, jumpSize, position-1, testedPositions);
-        
     }
 }
 
