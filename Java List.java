@@ -39,4 +39,4 @@ public class Solution {
         }
     }
 }
-
+// Have a quick day.
