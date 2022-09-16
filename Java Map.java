@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-
+// Java 8
 class Solution{
     public static void main(String []argh)
     {
