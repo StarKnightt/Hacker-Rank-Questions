@@ -3,7 +3,7 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
+// java 8
 public class Solution {
 
  public static void main(String[] args) {
@@ -26,3 +26,4 @@ HashSet<String> pairs = new HashSet<String>(t);
     }
    }
 }
+// Have a nice day
