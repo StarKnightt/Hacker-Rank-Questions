@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 // Java 15
 class Printer{
-    
     public static <E> void printArray(E[] inputArray) {
     // display array elements
     for (E element : inputArray){
@@ -10,7 +9,6 @@ class Printer{
   }
 }
 }
-
 public class Solution {
 
 
