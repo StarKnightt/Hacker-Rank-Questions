@@ -53,8 +53,6 @@ public class Solution
                         }
                 }
             });
-
-      
           for(Student st: studentList){
             System.out.println(st.getFname());
         }
