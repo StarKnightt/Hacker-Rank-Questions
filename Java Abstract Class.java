@@ -16,7 +16,6 @@ class MyBook extends Book {
     void setTitle(String s){
         this.title = s;
     }
-    
 }
 
 public class Main {
@@ -28,7 +27,6 @@ public class Main {
       MyBook new_novel=new MyBook();
       new_novel.setTitle(title);
       System.out.println("The title is: "+new_novel.getTitle());
-      
    }
 }
-
+// I know that we will achieve our goal successfully.
