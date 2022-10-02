@@ -10,10 +10,10 @@ public class Main
          if(element instanceof String)
             break;
       }
-      return it;
-      
+      return it;  
    }
-
+   
+   // Java 15
    public static void main(String []argh)
    {
       ArrayList mylist = new ArrayList();
@@ -29,14 +29,13 @@ public class Main
       {
          mylist.add(sc.next());
       }
-      
-      
       Iterator it=func(mylist);
       while(it.hasNext())
       {
          Object element = it.next();
          System.out.println((String)element);
       }
-      
    }
 }
+
+// Thank you , Have a amazing day.
