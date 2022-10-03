@@ -3,7 +3,7 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
+// Java 15
 public class Solution {
 
     public static void main(String[] args) {
@@ -21,6 +21,6 @@ public class Solution {
       }
     }
     scan.close();
-        
     }
 }
+// Keep Growing
