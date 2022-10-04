@@ -4,7 +4,7 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
+// Java 15
 class Add {
     public void add(Integer... arguments) {
         Integer numArgs = arguments.length;
@@ -25,7 +25,6 @@ class Add {
         System.out.println(sb.toString());
     }
 }
-
 
 public class Solution {
 
@@ -66,5 +65,5 @@ public class Solution {
                 e.printStackTrace();
             }
         }
-        
 }
+// Have a amazing life.
