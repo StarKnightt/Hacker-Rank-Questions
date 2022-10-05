@@ -3,7 +3,9 @@ public class Solution {
         public static void main(String[] args){
             Class student = Student.class;
             Method[] methods = student.getDeclaredMethods();
-
+                
+              // Java 7  
+               
             ArrayList<String> methodList = new ArrayList<>();
             for(int i = 0; i < methods.length; i++){
                 methodList.add(methods[i].getName());
@@ -13,5 +15,6 @@ public class Solution {
                 System.out.println(name);
             }
         }
-
     }
+
+// Have a sweet day. 
