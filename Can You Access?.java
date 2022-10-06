@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.regex.*;
 import java.security.*;
 
+//Java 15
 
 public class Solution {
 
@@ -56,3 +57,4 @@ class DoNotTerminate { //This class prevents exit(0)
         System.setSecurityManager(securityManager);
     }
 }   
+// Have a amazing day
