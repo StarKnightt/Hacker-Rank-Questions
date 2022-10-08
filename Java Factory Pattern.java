@@ -1,6 +1,7 @@
 import java.util.*;
 import java.security.*;
 interface Food {
+   
    public String getType();
   }
   class Pizza implements Food {
@@ -8,7 +9,7 @@ interface Food {
    return "Someone ordered a Fast Food!";
    }
   }
-
+// Java 15
   class Cake implements Food {
 
    public String getType() {
