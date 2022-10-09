@@ -12,3 +12,5 @@ class Singleton {
         return instance;
     }
 }
+
+// Have a Wonderful Day :)
