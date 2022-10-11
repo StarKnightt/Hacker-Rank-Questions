@@ -8,6 +8,7 @@ import java.util.regex.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// Java 15 
 enum Color {
     RED, GREEN
 }
@@ -231,3 +232,6 @@ public class Solution {
         System.out.println(res3);
     }
 }
+
+// It was really tough for me :)
+// Have a nice day.
