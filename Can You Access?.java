@@ -35,7 +35,6 @@ public class Solution {
             }
         }
     }//end of Inner
-    
 }//end of Solution
 
 class DoNotTerminate { //This class prevents exit(0)
