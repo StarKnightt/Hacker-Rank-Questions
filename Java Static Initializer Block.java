@@ -28,3 +28,5 @@ public class Solution {
         }
     } 
 } 
+
+// Have a nice day.
