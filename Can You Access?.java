@@ -57,4 +57,3 @@ class DoNotTerminate { //This class prevents exit(0)
     }
 }   
 // Have a amazing day
-
