@@ -6,7 +6,6 @@ class BiCycle{
         return "a vehicle with pedals.";
     }
 }
-
 class MotorCycle extends BiCycle{
     String define_me(){
         return "a cycle with an engine.";
@@ -26,5 +25,4 @@ class Solution{
         MotorCycle M=new MotorCycle();
     }
 }
-
 // Have a cute day
