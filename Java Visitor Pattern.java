@@ -8,22 +8,26 @@ import java.util.regex.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// Java 15 
+// Define an enumeration of colors
 enum Color {
     RED, GREEN
 }
 
+// Define an abstract class for a Tree
 abstract class Tree {
+    // Define private fields for value, color, and depth
     private int value;
     private Color color;
     private int depth;
 
+    // Define a constructor that sets the value, color, and depth fields
     public Tree(int value, Color color, int depth) {
         this.value = value;
         this.color = color;
         this.depth = depth;
     }
 
+    // Define getters for the value, color, and depth fields
     public int getValue() {
         return value;
     }
@@ -36,16 +40,21 @@ abstract class Tree {
         return depth;
     }
 
+    // Define abstract methods for accepting a visitor
     public abstract void accept(TreeVis visitor);
 }
 
+// Define a class for a TreeNode that extends Tree
 class TreeNode extends Tree {
+    // Define a private ArrayList of children
     private ArrayList<Tree> children = new ArrayList();
 
+    // Define a constructor that calls the super constructor and passes in the value, color, and depth
     public TreeNode(int value, Color color, int depth) {
         super(value, color, depth);
     }
 
+    // Define a method for accepting a visitor that visits each child
     public void accept(TreeVis visitor) {
         visitor.visitNode(this);
         for (Tree child : children) {
@@ -53,185 +62,64 @@ class TreeNode extends Tree {
         }
     }
 
+    // Define a method for adding a child to the ArrayList
     public void addChild(Tree child) {
         children.add(child);
     }
 }
 
+// Define a class for a TreeLeaf that extends Tree
 class TreeLeaf extends Tree {
+    // Define a constructor that calls the super constructor and passes in the value, color, and depth
     public TreeLeaf(int value, Color color, int depth) {
         super(value, color, depth);
     }
 
+    // Define a method for accepting a visitor that visits the leaf
     public void accept(TreeVis visitor) {
         visitor.visitLeaf(this);
     }
 }
 
+// Define an abstract class for a Tree Visitor
 abstract class TreeVis {
+    // Define abstract methods for getting the result and visiting a node or leaf
     public abstract int getResult();
     public abstract void visitNode(TreeNode node);
     public abstract void visitLeaf(TreeLeaf leaf);
 
 }
 
-
+// Define a class for a SumInLeavesVisitor that extends TreeVis
 class SumInLeavesVisitor extends TreeVis {
+    // Define a private field for the result
     private int result = 0;
 
+    // Define a method for getting the result
     public int getResult() {
         return result;
     }
 
+    // Define a method for visiting a node (does nothing in this visitor)
     public void visitNode(TreeNode node) {
         // do nothing
     }
 
+    // Define a method for visiting a leaf and adding its value to the result
     public void visitLeaf(TreeLeaf leaf) {
         result += leaf.getValue();
     }
 }
 
+// Define a class for a ProductOfRedNodesVisitor that extends TreeVis
 class ProductOfRedNodesVisitor extends TreeVis {
+    // Define a private field for the result and a constant M
     private long result = 1;
     private final int M = 1000000007;
 
+    // Define a method for getting the result
     public int getResult() {
         return (int) result;
     }
 
-    public void visitNode(TreeNode node) {
-        if (node.getColor() == Color.RED) {
-            result = (result * node.getValue()) % M;
-        }
-    }
-
-    public void visitLeaf(TreeLeaf leaf) {
-        if (leaf.getColor() == Color.RED) {
-            result = (result * leaf.getValue()) % M;
-        }
-    }
-}
-
-class FancyVisitor extends TreeVis {
-    private int nonLeafEvenDepthSum = 0;
-    private int greenLeavesSum = 0;
-
-    public int getResult() {
-        return Math.abs(nonLeafEvenDepthSum - greenLeavesSum);
-    }
-
-    public void visitNode(TreeNode node) {
-        if (node.getDepth() % 2 == 0) {
-            nonLeafEvenDepthSum += node.getValue();
-        }
-    }
-
-    public void visitLeaf(TreeLeaf leaf) {
-        if (leaf.getColor() == Color.GREEN) {
-            greenLeavesSum += leaf.getValue();
-        }
-    }
-}
-
-public class Solution {
-    private static int [] values;
-    private static Color [] colors;
-    private static HashMap<Integer, HashSet<Integer>> map;
-    
-    public static Tree solve() {
-        Scanner scan = new Scanner(System.in);
-        int numNodes = scan.nextInt();
-        
-        /* Save nodes and colors */
-        values = new int[numNodes];
-        colors = new Color[numNodes];
-        map = new HashMap(numNodes);
-        for (int i = 0; i < numNodes; i++) {
-            values[i] = scan.nextInt();
-        }
-        for (int i = 0; i < numNodes; i++) {
-            colors[i] = scan.nextInt() == 0 ? Color.RED : Color.GREEN;
-        }
-        
-        /* Save edges */
-        for (int i = 0; i < numNodes - 1; i++) {
-            int u = scan.nextInt();
-            int v = scan.nextInt();
-            
-            /* Edges are undirected: Add 1st direction */
-            HashSet<Integer> uNeighbors = map.get(u);
-            if (uNeighbors == null) {                
-                uNeighbors = new HashSet();
-                map.put(u, uNeighbors);
-            }
-            uNeighbors.add(v);
-            
-            /* Edges are undirected: Add 2nd direction */
-            HashSet<Integer> vNeighbors = map.get(v);
-            if (vNeighbors == null) {
-                vNeighbors = new HashSet();
-                map.put(v, vNeighbors);
-            }
-            vNeighbors.add(u);
-        }
-        scan.close();
-        
-        /* Handle 1-node tree */
-        if (numNodes == 1) {
-            return new TreeLeaf(values[0], colors[0], 0);
-        }
-
-        /* Create Tree */
-        TreeNode root = new TreeNode(values[0], colors[0], 0);
-        addChildren(root, 1);
-        return root;
-    }
-
-    /* Recursively adds children of a TreeNode */
-    private static void addChildren(TreeNode parent, Integer parentNum) {
-        /* Get HashSet of children and loop through them */
-        for (Integer treeNum : map.get(parentNum)) {
-            map.get(treeNum).remove(parentNum); // removes the opposite arrow direction
-            
-            /* Add child */
-            HashSet<Integer> grandChildren = map.get(treeNum);
-            boolean childHasChild = (grandChildren != null && !grandChildren.isEmpty());
-            Tree tree;
-            if (childHasChild) {
-                tree = new TreeNode(values[treeNum - 1], colors[treeNum - 1], parent.getDepth() + 1);
-            } else {
-                tree = new TreeLeaf(values[treeNum - 1], colors[treeNum - 1], parent.getDepth() + 1);
-            }
-            parent.addChild(tree);
-
-            /* Recurse if necessary */
-            if (tree instanceof TreeNode) {
-                addChildren((TreeNode) tree, treeNum);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        Tree root = solve();
-
-        SumInLeavesVisitor vis1       = new SumInLeavesVisitor();
-        ProductOfRedNodesVisitor vis2 = new ProductOfRedNodesVisitor();
-        FancyVisitor vis3             = new FancyVisitor();
-
-        root.accept(vis1);
-        root.accept(vis2);
-        root.accept(vis3);
-
-        int res1 = vis1.getResult();
-        int res2 = vis2.getResult();
-        int res3 = vis3.getResult();
-
-        System.out.println(res1);
-        System.out.println(res2);
-        System.out.println(res3);
-    }
-}
-
-// It was really tough for me :)
-// Have a nice day.
+    // Define a method for visiting a node and multiplying its
