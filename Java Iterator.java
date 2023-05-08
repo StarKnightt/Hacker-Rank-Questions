@@ -12,7 +12,6 @@ public class Main
       }
       return it;  
    }
-   
    // Java 15
    public static void main(String []argh)
    {
