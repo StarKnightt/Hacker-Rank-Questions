@@ -12,5 +12,4 @@ System.out.println(num3);
     }
 }
 // Thank you.
-// Have a wondeful day.
-
+// Have a wondeful day
